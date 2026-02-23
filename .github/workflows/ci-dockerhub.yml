@@ -31,6 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
+          # This pulls 'deyona' from your GitHub Secrets
           images: ${{ secrets.DOCKERHUB_USERNAME }}/python-ci-lab
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
